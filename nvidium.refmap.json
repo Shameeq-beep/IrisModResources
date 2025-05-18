@@ -1,0 +1,52 @@
+{
+  "mappings": {
+    "me/cortex/nvidium/mixin/minecraft/MixinGameRenderer": {
+      "getFarPlaneDistance": "Lnet/minecraft/client/renderer/GameRenderer;m_172790_()F"
+    },
+    "me/cortex/nvidium/mixin/minecraft/MixinBackgroundRenderer": {
+      "applyFog": "Lnet/minecraft/client/renderer/FogRenderer;m_234172_(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/FogRenderer$FogMode;FZF)V"
+    },
+    "me/cortex/nvidium/mixin/minecraft/MixinWorldRenderer": {
+      "Lnet/minecraft/client/render/GameRenderer;getViewDistance()F": "Lnet/minecraft/client/renderer/GameRenderer;m_109152_()F",
+      "render": "Lnet/minecraft/client/renderer/LevelRenderer;m_109599_(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V"
+    },
+    "me/cortex/nvidium/mixin/minecraft/MixinMinecraftClient": {
+      "render": "Lnet/minecraft/client/Minecraft;m_91383_(Z)V"
+    },
+    "me/cortex/nvidium/mixin/minecraft/LightMapAccessor": {
+      "texture": "f_109870_:Lnet/minecraft/client/renderer/texture/DynamicTexture;"
+    },
+    "me/cortex/nvidium/mixin/sodium/MixinSodiumWorldRenderer": {
+      "renderBlockEntities(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/BufferBuilderStorage;Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;FLnet/minecraft/client/render/VertexConsumerProvider$Immediate;DDDLnet/minecraft/client/render/block/entity/BlockEntityRenderDispatcher;)V": "Lme/jellysquid/mods/sodium/client/render/SodiumWorldRenderer;renderBlockEntities(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/RenderBuffers;Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;FLnet/minecraft/client/renderer/MultiBufferSource$BufferSource;DDDLnet/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher;)V"
+    },
+    "me/cortex/nvidium/mixin/sodium/MixinRenderSectionManager": {
+      "Lme/jellysquid/mods/sodium/client/render/chunk/compile/executor/ChunkBuilder;<init>(Lnet/minecraft/client/world/ClientWorld;Lme/jellysquid/mods/sodium/client/render/chunk/vertex/format/ChunkVertexType;)V": "Lme/jellysquid/mods/sodium/client/render/chunk/compile/executor/ChunkBuilder;<init>(Lnet/minecraft/client/multiplayer/ClientLevel;Lme/jellysquid/mods/sodium/client/render/chunk/vertex/format/ChunkVertexType;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "me/cortex/nvidium/mixin/minecraft/MixinGameRenderer": {
+        "getFarPlaneDistance": "Lnet/minecraft/client/renderer/GameRenderer;m_172790_()F"
+      },
+      "me/cortex/nvidium/mixin/minecraft/MixinBackgroundRenderer": {
+        "applyFog": "Lnet/minecraft/client/renderer/FogRenderer;m_234172_(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/FogRenderer$FogMode;FZF)V"
+      },
+      "me/cortex/nvidium/mixin/minecraft/MixinWorldRenderer": {
+        "Lnet/minecraft/client/render/GameRenderer;getViewDistance()F": "Lnet/minecraft/client/renderer/GameRenderer;m_109152_()F",
+        "render": "Lnet/minecraft/client/renderer/LevelRenderer;m_109599_(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V"
+      },
+      "me/cortex/nvidium/mixin/minecraft/MixinMinecraftClient": {
+        "render": "Lnet/minecraft/client/Minecraft;m_91383_(Z)V"
+      },
+      "me/cortex/nvidium/mixin/minecraft/LightMapAccessor": {
+        "texture": "f_109870_:Lnet/minecraft/client/renderer/texture/DynamicTexture;"
+      },
+      "me/cortex/nvidium/mixin/sodium/MixinSodiumWorldRenderer": {
+        "renderBlockEntities(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/BufferBuilderStorage;Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;FLnet/minecraft/client/render/VertexConsumerProvider$Immediate;DDDLnet/minecraft/client/render/block/entity/BlockEntityRenderDispatcher;)V": "Lme/jellysquid/mods/sodium/client/render/SodiumWorldRenderer;renderBlockEntities(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/RenderBuffers;Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;FLnet/minecraft/client/renderer/MultiBufferSource$BufferSource;DDDLnet/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher;)V"
+      },
+      "me/cortex/nvidium/mixin/sodium/MixinRenderSectionManager": {
+        "Lme/jellysquid/mods/sodium/client/render/chunk/compile/executor/ChunkBuilder;<init>(Lnet/minecraft/client/world/ClientWorld;Lme/jellysquid/mods/sodium/client/render/chunk/vertex/format/ChunkVertexType;)V": "Lme/jellysquid/mods/sodium/client/render/chunk/compile/executor/ChunkBuilder;<init>(Lnet/minecraft/client/multiplayer/ClientLevel;Lme/jellysquid/mods/sodium/client/render/chunk/vertex/format/ChunkVertexType;)V"
+      }
+    }
+  }
+}
